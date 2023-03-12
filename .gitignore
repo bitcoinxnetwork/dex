@@ -1,0 +1,5 @@
+.env
+hardhat.config.js
+/scripts/
+/node_modules/
+/test/

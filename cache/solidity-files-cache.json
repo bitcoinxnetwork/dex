@@ -1,0 +1,1329 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1677027124415,
+      "contentHash": "2adbd82f6d055a4751566d4671512b03",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1677304885572,
+      "contentHash": "b272d4799798a74cf9ded0da65613a42",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/Context.sol",
+        "./IERC20.sol",
+        "../../math/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1677028952573,
+      "contentHash": "030ab7093a8e173b1e9f317bc4101a47",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.4"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/core/SafeOwnable.sol": {
+      "lastModificationDate": 1677037435280,
+      "contentHash": "2aa535781d213858b919b564777c23ac",
+      "sourceName": "contracts/core/SafeOwnable.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.4"
+      ],
+      "artifacts": [
+        "SafeOwnable"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/core/Timelock.sol": {
+      "lastModificationDate": 1677032202578,
+      "contentHash": "31a84d17074fed6885b68b8634883875",
+      "sourceName": "contracts/core/Timelock.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../libraries/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.12"
+      ],
+      "artifacts": [
+        "Timelock"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/libraries/SafeMath.sol": {
+      "lastModificationDate": 1677037009534,
+      "contentHash": "8b7692d6ea7a71a2a14805923d349198",
+      "sourceName": "contracts/libraries/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.0"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/token/SafeBEP20.sol": {
+      "lastModificationDate": 1677036888412,
+      "contentHash": "6a7f2399f2216d3dedccad30cd6996ae",
+      "sourceName": "contracts/token/SafeBEP20.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IBEP20.sol",
+        "../libraries/SafeMath.sol",
+        "../libraries/Address.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0"
+      ],
+      "artifacts": [
+        "SafeBEP20"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/interfaces/IBEP20.sol": {
+      "lastModificationDate": 1677032202703,
+      "contentHash": "0fd61f8b70c32c9112b8db0d824989bb",
+      "sourceName": "contracts/interfaces/IBEP20.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.0"
+      ],
+      "artifacts": [
+        "IBEP20"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/libraries/Address.sol": {
+      "lastModificationDate": 1677032202652,
+      "contentHash": "d6b7e23e2206427c30bad6a843228610",
+      "sourceName": "contracts/libraries/Address.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.6"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/token/BEP20.sol": {
+      "lastModificationDate": 1677045196923,
+      "contentHash": "9b16034010cc2837f1d6bb9b1de811ea",
+      "sourceName": "contracts/token/BEP20.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IBEP20.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts/utils/Context.sol",
+        "../libraries/SafeMath.sol",
+        "../libraries/Address.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.4"
+      ],
+      "artifacts": [
+        "BEP20"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1677304920832,
+      "contentHash": "ccc36446bd983e4b7ad4c7a72d6add59",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/token/BitcoinxToken.sol": {
+      "lastModificationDate": 1677037314757,
+      "contentHash": "454ad4ef7c7262367fed206a1aaf37ea",
+      "sourceName": "contracts/token/BitcoinxToken.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./BEP20.sol"
+      ],
+      "versionPragmas": [
+        ">0.6.6"
+      ],
+      "artifacts": [
+        "BitcoinxToken"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/node_modules/@openzeppelin/contracts/math/SafeMath.sol": {
+      "lastModificationDate": 1677027135304,
+      "contentHash": "e03e12206057e809eb76c5f681170c32",
+      "sourceName": "@openzeppelin/contracts/math/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/migrator/LiquidityMigrator.sol": {
+      "lastModificationDate": 1677305423299,
+      "contentHash": "a83881f0c30c8f608c070b5fe53084b9",
+      "sourceName": "contracts/migrator/LiquidityMigrator.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "../interfaces/IBitcoinxRouter.sol",
+        "../interfaces/IBitcoinxPair.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.6"
+      ],
+      "artifacts": [
+        "LiquidityMigrator"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/interfaces/IBitcoinxRouter.sol": {
+      "lastModificationDate": 1677302239592,
+      "contentHash": "d3b10454481c9e057b212aaa8a837a03",
+      "sourceName": "contracts/interfaces/IBitcoinxRouter.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.4"
+      ],
+      "artifacts": [
+        "IBitcoinxRouter"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/interfaces/IBitcoinxPair.sol": {
+      "lastModificationDate": 1677037174403,
+      "contentHash": "09720d7934e49e512dcefcc918a4c2b2",
+      "sourceName": "contracts/interfaces/IBitcoinxPair.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IBitcoinxPair"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/libraries/BitcoinxLibrary.sol": {
+      "lastModificationDate": 1677304569358,
+      "contentHash": "abd4968dfa9cd1696bd5385ad6e6eb1f",
+      "sourceName": "contracts/libraries/BitcoinxLibrary.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IBitcoinxPair.sol",
+        "../interfaces/IBitcoinxFactory.sol",
+        "./SafeMath.sol",
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "BitcoinxLibrary"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/interfaces/IBitcoinxFactory.sol": {
+      "lastModificationDate": 1677037156358,
+      "contentHash": "b370ba3bd2415a74472f53e37f977435",
+      "sourceName": "contracts/interfaces/IBitcoinxFactory.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IBitcoinxFactory"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/node_modules/hardhat/console.sol": {
+      "lastModificationDate": 1677027142451,
+      "contentHash": "4ff3cd2f6272c9a6516e9ee4f2b967d3",
+      "sourceName": "hardhat/console.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">= 0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "console"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/routers/BitcoinxRouter.sol": {
+      "lastModificationDate": 1677305659863,
+      "contentHash": "d81b45df1ea6c31fb83965231210e512",
+      "sourceName": "contracts/routers/BitcoinxRouter.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IBitcoinxRouter.sol",
+        "../libraries/TransferHelper.sol",
+        "../interfaces/IBitcoinxFactory.sol",
+        "../libraries/BitcoinxLibrary.sol",
+        "../interfaces/IERC20.sol",
+        "../interfaces/IWETH.sol",
+        "../libraries/SafeMath.sol",
+        "../token/BEP20.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.6"
+      ],
+      "artifacts": [
+        "BitcoinxRouter"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/libraries/TransferHelper.sol": {
+      "lastModificationDate": 1677158319488,
+      "contentHash": "8de21f63f5747423f0a492b85a612927",
+      "sourceName": "contracts/libraries/TransferHelper.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0"
+      ],
+      "artifacts": [
+        "TransferHelper"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/interfaces/IERC20.sol": {
+      "lastModificationDate": 1677032202663,
+      "contentHash": "d93eb938bd965cfa403a16931cead396",
+      "sourceName": "contracts/interfaces/IERC20.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/interfaces/IWETH.sol": {
+      "lastModificationDate": 1677032202698,
+      "contentHash": "394225ba5efc3d0459b82f7bae859443",
+      "sourceName": "contracts/interfaces/IWETH.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IWETH"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/mock/MockToken.sol": {
+      "lastModificationDate": 1677032202599,
+      "contentHash": "ad18e92ec3caaaac90c7e591a76a0362",
+      "sourceName": "contracts/mock/MockToken.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/math/SafeMath.sol",
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.4"
+      ],
+      "artifacts": [
+        "MockToken"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/libraries/DecimalMath.sol": {
+      "lastModificationDate": 1677032202656,
+      "contentHash": "b17f4e1251b6f26559dd864fc383f486",
+      "sourceName": "contracts/libraries/DecimalMath.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/math/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        "=0.7.4"
+      ],
+      "artifacts": [
+        "DecimalMath",
+        "MySafeMath"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/factory/BitcoinxPair.sol": {
+      "lastModificationDate": 1677149223898,
+      "contentHash": "1be22e71aa0df7bff46181912bba71bd",
+      "sourceName": "contracts/factory/BitcoinxPair.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IBitcoinxPair.sol",
+        "../token/BitcoinxERC20.sol",
+        "../libraries/Math.sol",
+        "../libraries/UQ112x112.sol",
+        "../interfaces/IERC20.sol",
+        "../interfaces/IBitcoinxFactory.sol",
+        "../interfaces/IBitcoinxCallee.sol"
+      ],
+      "versionPragmas": [
+        ">=0.5.16"
+      ],
+      "artifacts": [
+        "BitcoinxPair"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/token/BitcoinxERC20.sol": {
+      "lastModificationDate": 1677212152954,
+      "contentHash": "44f969f2cfd7c3381b9a9f4d405ddc86",
+      "sourceName": "contracts/token/BitcoinxERC20.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IBitcoinxERC20.sol",
+        "../libraries/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        ">=0.5.16"
+      ],
+      "artifacts": [
+        "BitcoinxERC20"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/libraries/Math.sol": {
+      "lastModificationDate": 1677037009530,
+      "contentHash": "f857b593fafd024e9c94bc2878a7fd4b",
+      "sourceName": "contracts/libraries/Math.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.16"
+      ],
+      "artifacts": [
+        "Math"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/libraries/UQ112x112.sol": {
+      "lastModificationDate": 1677032202652,
+      "contentHash": "b8c84d86e899f985289f5cfe4858f4a7",
+      "sourceName": "contracts/libraries/UQ112x112.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.16"
+      ],
+      "artifacts": [
+        "UQ112x112"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/interfaces/IBitcoinxCallee.sol": {
+      "lastModificationDate": 1677037034500,
+      "contentHash": "28928ed2cc4bca56d5201c8191c5ce22",
+      "sourceName": "contracts/interfaces/IBitcoinxCallee.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IBitcoinxCallee"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/interfaces/IBitcoinxERC20.sol": {
+      "lastModificationDate": 1677037045750,
+      "contentHash": "1836fdf73bc7b7120177c5dfd20a9340",
+      "sourceName": "contracts/interfaces/IBitcoinxERC20.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IBitcoinxERC20"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/factory/BitcoinxFactory.sol": {
+      "lastModificationDate": 1677127327328,
+      "contentHash": "73d3a1cb3d89c9cfa0f2e3e92b56a609",
+      "sourceName": "contracts/factory/BitcoinxFactory.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./BitcoinxPair.sol",
+        "../libraries/BitcoinxLibrary.sol"
+      ],
+      "versionPragmas": [
+        ">=0.5.16"
+      ],
+      "artifacts": [
+        "BitcoinxFactory"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/token/DevCoin.sol": {
+      "lastModificationDate": 1677055098578,
+      "contentHash": "859ec7c82339494a45594d6af7ed8c2a",
+      "sourceName": "contracts/token/DevCoin.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.4"
+      ],
+      "artifacts": [
+        "DevCoin"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/interfaces/IBitcoinxRouter01.sol": {
+      "lastModificationDate": 1677037182147,
+      "contentHash": "e5511c8b7c55d1b58054b6a34f60555f",
+      "sourceName": "contracts/interfaces/IBitcoinxRouter01.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.2"
+      ],
+      "artifacts": [
+        "IBitcoinxRouter01"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/interfaces/IBitcoinxRouter02.sol": {
+      "lastModificationDate": 1677037190204,
+      "contentHash": "dccc25581ae76f1e139eba4a4e8d1452",
+      "sourceName": "contracts/interfaces/IBitcoinxRouter02.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IBitcoinxRouter01.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.2"
+      ],
+      "artifacts": [
+        "IBitcoinxRouter02"
+      ]
+    },
+    "/Users/gtccomputer/Dev/kube/bitcoinx/dex/contracts/token/WBNB.sol": {
+      "lastModificationDate": 1677047538684,
+      "contentHash": "6caee7c07dce4f3a777b7381f516ee74",
+      "sourceName": "contracts/token/WBNB.sol",
+      "solcConfig": {
+        "version": "0.7.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.4"
+      ],
+      "artifacts": [
+        "WBNB"
+      ]
+    }
+  }
+}
