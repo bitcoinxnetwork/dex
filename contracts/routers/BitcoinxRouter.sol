@@ -17,7 +17,7 @@ contract BitcoinxRouter is IBitcoinxRouter {
     address public override factory;
     address public override WETH;
     address public override routerFeeReceiver;
-    uint256 baseReward = 10000;
+    uint256 baseReward = 10000000000000000000000; //wei
     address public owner;
 
     BEP20 public rewardToken;
@@ -379,94 +379,94 @@ contract BitcoinxRouter is IBitcoinxRouter {
         if (msg.value > oldAmounts) TransferHelper.safeTransferETH(msg.sender, msg.value - oldAmounts);
     }
 
-    // function _swapSupportingFeeOnTransferTokens(
-    //     address[] memory path, 
-    //     address _to
-    // ) internal virtual {
-    //     for (uint i; i < path.length - 1; i++) {
-    //         (address input, address output) = (path[i], path[i + 1]);
-    //         (address token0,) = BitcoinxLibrary.sortTokens(input, output);
-    //         IBitcoinxPair pair = IBitcoinxPair(BitcoinxLibrary.pairFor(factory, input, output));
-    //         uint amountInput;
-    //         uint amountOutput;
-    //         { // scope to avoid stack too deep errors
-    //         (uint reserve0, uint reserve1,) = pair.getReserves();
-    //         (uint reserveInput, uint reserveOutput) = input == token0 ? (reserve0, reserve1) : (reserve1, reserve0);
-    //         amountInput = IERC20(input).balanceOf(address(pair)).sub(reserveInput);
-    //         amountOutput = BitcoinxLibrary.getAmountOut(amountInput, reserveInput, reserveOutput);
-    //         }
+    function _swapSupportingFeeOnTransferTokens(
+        address[] memory path, 
+        address _to
+    ) internal virtual {
+        for (uint i; i < path.length - 1; i++) {
+            (address input, address output) = (path[i], path[i + 1]);
+            (address token0,) = BitcoinxLibrary.sortTokens(input, output);
+            IBitcoinxPair pair = IBitcoinxPair(BitcoinxLibrary.pairFor(factory, input, output));
+            uint amountInput;
+            uint amountOutput;
+            { // scope to avoid stack too deep errors
+            (uint reserve0, uint reserve1,) = pair.getReserves();
+            (uint reserveInput, uint reserveOutput) = input == token0 ? (reserve0, reserve1) : (reserve1, reserve0);
+            amountInput = IERC20(input).balanceOf(address(pair)).sub(reserveInput);
+            amountOutput = BitcoinxLibrary.getAmountOut(amountInput, reserveInput, reserveOutput);
+            }
             
-    //         (uint amount0Out, uint amount1Out) = input == token0 ? (uint(0), amountOutput) : (amountOutput, uint(0));
-    //         //address to = i < path.length - 2 ? BitcoinxLibrary.pairFor(factory, output, path[i + 2]) : _to;
-    //         //address to = i < path.length - 2 ? address(this) : _to;
-    //         pair.swap(amount0Out, amount1Out, i < path.length - 2 ? address(this) : _to, new bytes(0));
-    //         if (i < path.length - 2) {
-    //             amountOutput = IERC20(output).balanceOf(address(this));
-    //             routerFee(address(this), output, amountOutput);
-    //             TransferHelper.safeTransfer(path[i + 1], BitcoinxLibrary.pairFor(factory, output, path[i + 2]), IERC20(output).balanceOf(address(this)));
-    //         }
-    //     }
-    // }
+            (uint amount0Out, uint amount1Out) = input == token0 ? (uint(0), amountOutput) : (amountOutput, uint(0));
+            //address to = i < path.length - 2 ? BitcoinxLibrary.pairFor(factory, output, path[i + 2]) : _to;
+            //address to = i < path.length - 2 ? address(this) : _to;
+            pair.swap(amount0Out, amount1Out, i < path.length - 2 ? address(this) : _to, new bytes(0));
+            if (i < path.length - 2) {
+                amountOutput = IERC20(output).balanceOf(address(this));
+                routerFee(address(this), output, amountOutput);
+                TransferHelper.safeTransfer(path[i + 1], BitcoinxLibrary.pairFor(factory, output, path[i + 2]), IERC20(output).balanceOf(address(this)));
+            }
+        }
+    }
 
-    // function swapExactTokensForTokensSupportingFeeOnTransferTokens(
-    //     uint amountIn,
-    //     uint amountOutMin,
-    //     address[] memory path,
-    //     address to,
-    //     uint deadline
-    // ) external virtual override ensure(deadline) {
-    //     amountIn = routerFee(msg.sender, path[0], amountIn);
-    //     TransferHelper.safeTransferFrom(
-    //         path[0], msg.sender, BitcoinxLibrary.pairFor(factory, path[0], path[1]), amountIn
-    //     );
-    //     uint balanceBefore = IERC20(path[path.length - 1]).balanceOf(to);
-    //     _swapSupportingFeeOnTransferTokens(path, to);
-    //     rewards[msg.sender] += baseReward;
-    //     require(
-    //         IERC20(path[path.length - 1]).balanceOf(to).sub(balanceBefore) >= amountOutMin,
-    //         'BitcoinxRouter: INSUFFICIENT_OUTPUT_AMOUNT'
-    //     );
-    // }
+    function swapExactTokensForTokensSupportingFeeOnTransferTokens(
+        uint amountIn,
+        uint amountOutMin,
+        address[] memory path,
+        address to,
+        uint deadline
+    ) external virtual override ensure(deadline) {
+        amountIn = routerFee(msg.sender, path[0], amountIn);
+        TransferHelper.safeTransferFrom(
+            path[0], msg.sender, BitcoinxLibrary.pairFor(factory, path[0], path[1]), amountIn
+        );
+        uint balanceBefore = IERC20(path[path.length - 1]).balanceOf(to);
+        _swapSupportingFeeOnTransferTokens(path, to);
+        rewards[msg.sender] += baseReward;
+        require(
+            IERC20(path[path.length - 1]).balanceOf(to).sub(balanceBefore) >= amountOutMin,
+            'BitcoinxRouter: INSUFFICIENT_OUTPUT_AMOUNT'
+        );
+    }
 
-    // function swapExactETHForTokensSupportingFeeOnTransferTokens(
-    //     uint amountOutMin,
-    //     address[] memory path,
-    //     address to,
-    //     uint deadline
-    // ) external virtual override payable ensure(deadline) {
-    //     require(path[0] == WETH, 'BitcoinxRouter: INVALID_PATH');
-    //     uint amountIn = msg.value;
-    //     IWETH(WETH).deposit{value: amountIn}();
-    //     amountIn = routerFee(address(this), path[0], amountIn);
-    //     assert(IWETH(WETH).transfer(BitcoinxLibrary.pairFor(factory, path[0], path[1]), amountIn));
-    //     uint balanceBefore = IERC20(path[path.length - 1]).balanceOf(to);
-    //     _swapSupportingFeeOnTransferTokens(path, to);
-    //     rewards[msg.sender] += baseReward;
-    //     require(
-    //         IERC20(path[path.length - 1]).balanceOf(to).sub(balanceBefore) >= amountOutMin,
-    //         'BitcoinxRouter: INSUFFICIENT_OUTPUT_AMOUNT'
-    //     );
-    // }
+    function swapExactETHForTokensSupportingFeeOnTransferTokens(
+        uint amountOutMin,
+        address[] memory path,
+        address to,
+        uint deadline
+    ) external virtual override payable ensure(deadline) {
+        require(path[0] == WETH, 'BitcoinxRouter: INVALID_PATH');
+        uint amountIn = msg.value;
+        IWETH(WETH).deposit{value: amountIn}();
+        amountIn = routerFee(address(this), path[0], amountIn);
+        assert(IWETH(WETH).transfer(BitcoinxLibrary.pairFor(factory, path[0], path[1]), amountIn));
+        uint balanceBefore = IERC20(path[path.length - 1]).balanceOf(to);
+        _swapSupportingFeeOnTransferTokens(path, to);
+        rewards[msg.sender] += baseReward;
+        require(
+            IERC20(path[path.length - 1]).balanceOf(to).sub(balanceBefore) >= amountOutMin,
+            'BitcoinxRouter: INSUFFICIENT_OUTPUT_AMOUNT'
+        );
+    }
 
-    // function swapExactTokensForETHSupportingFeeOnTransferTokens(
-    //     uint amountIn,
-    //     uint amountOutMin,
-    //     address[] memory path,
-    //     address to,
-    //     uint deadline
-    // ) external virtual override ensure(deadline) {
-    //     require(path[path.length - 1] == WETH, 'BitcoinxRouter: INVALID_PATH');
-    //     amountIn = routerFee(msg.sender, path[0], amountIn);
-    //     TransferHelper.safeTransferFrom(
-    //         path[0], msg.sender, BitcoinxLibrary.pairFor(factory, path[0], path[1]), amountIn
-    //     );
-    //     _swapSupportingFeeOnTransferTokens(path, address(this));
-    //     rewards[msg.sender] += baseReward;
-    //     uint amountOut = IERC20(WETH).balanceOf(address(this));
-    //     require(amountOut >= amountOutMin, 'BitcoinxRouter: INSUFFICIENT_OUTPUT_AMOUNT');
-    //     IWETH(WETH).withdraw(amountOut);
-    //     TransferHelper.safeTransferETH(to, amountOut);
-    // }
+    function swapExactTokensForETHSupportingFeeOnTransferTokens(
+        uint amountIn,
+        uint amountOutMin,
+        address[] memory path,
+        address to,
+        uint deadline
+    ) external virtual override ensure(deadline) {
+        require(path[path.length - 1] == WETH, 'BitcoinxRouter: INVALID_PATH');
+        amountIn = routerFee(msg.sender, path[0], amountIn);
+        TransferHelper.safeTransferFrom(
+            path[0], msg.sender, BitcoinxLibrary.pairFor(factory, path[0], path[1]), amountIn
+        );
+        _swapSupportingFeeOnTransferTokens(path, address(this));
+        rewards[msg.sender] += baseReward;
+        uint amountOut = IERC20(WETH).balanceOf(address(this));
+        require(amountOut >= amountOutMin, 'BitcoinxRouter: INSUFFICIENT_OUTPUT_AMOUNT');
+        IWETH(WETH).withdraw(amountOut);
+        TransferHelper.safeTransferETH(to, amountOut);
+    }
     //helper
     function quote(
         uint amountA, 
